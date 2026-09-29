@@ -1,0 +1,139 @@
+p {
+  color: #000;
+}
+.title {
+  font-size: 30px;
+  color: #212121;
+  text-align: center;
+}
+main {
+  width: 100%;
+  max-width: 1024px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+section {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 40px;
+}
+
+.manual_btn a {
+  width: 360px;
+  padding: 20px 0;
+  background-color: #fff;
+  border-radius: 4px;
+  color: #b50080;
+  text-decoration: none;
+  text-align: center;
+  border: 2px solid #b50080;
+}
+
+.manual_btn a::after {
+  right: 27px;
+  width: 9px;
+  height: 9px;
+  border-top: 2px solid #b50080;
+  border-right: 2px solid #b50080;
+}
+
+.manual_btn a:hover{
+  background-color: #b50080;
+  color: #fff;
+  cursor: pointer;
+}
+
+.manual_btn a:hover::after {
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+}
+
+.sp_br {
+    display: none;
+  }
+
+/*==================== 各マニュアルへのリンク ==================== */
+.sec_manual {
+  margin-top: 40px;
+}
+.manual_wrapper {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.manual_wrapper > ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.manual_wrapper > ul li:first-child {
+  padding-right: 30px;
+}
+
+/*==================== よくある質問 ==================== */
+
+.sec_faq {
+  margin-top: 50px;
+}
+
+/* ----------- タブ切り替え -----------*/
+.tabs {
+  margin: auto;
+  margin-top: 50px;
+  width: 100%;
+}
+.tab_list {
+  display: flex;
+  justify-content: space-between;
+}
+.tab_item {
+  color: #757575;
+  border-radius: 8px 8px 0 0;
+  background-color: #f5f5f5;
+  border: solid 1px #e0e0e0;
+  border-bottom: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  width: 20%;
+  text-align: center;
+}
+.tab_content {
+  background: #fff;
+}
+.tab_panel {
+  display: none;
+}
+.tab_item.active {
+  background-color: #b50080;
+  border: solid 1px #b50080;
+  color: #fff;
+  font-weight: bold;
+}
+.tab_panel.active {
+  display: block;
+  padding: 40px 0 0;
+  color: #000;
+  border-top: solid 1px #e0e0e0;
+}
+
+/* ----------- 質問へのリンク -----------*/
+.tab_panel ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.faq_link {
+  width: 32%;
+  margin-bottom: 20px;
+}
+
+.tab_panel.active ul::after {
+  display: block;
+  content: "";
+  width: 32%;
+}

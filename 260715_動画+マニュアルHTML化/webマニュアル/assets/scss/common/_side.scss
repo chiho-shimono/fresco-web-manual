@@ -1,0 +1,38 @@
+@use "../abstracts/variables" as *;
+
+.layout {
+  &__side {
+    &--left {
+      display: flex !important;
+      > img {
+        width: 80%;
+        max-width: 280px;
+      }
+    }
+    &--right {
+      position: relative;
+    }
+    &--right-content {
+      position: absolute;
+      top: 5%;
+      left: 50%;
+      transform: translate(-50%, 0);
+      max-width: 165px;
+      > img {
+        width: 100%;
+      }
+    }
+    &--flex-text {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin: 0 0 1.5rem;
+      > p {
+        color: $color-main;
+        font-weight: 700;
+        margin: 0 0.4rem 0 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,73 @@
+// フォントサイズ
+$fs-xxl: 3.2rem; // h1 超大見出し
+$fs-xl: 2.8rem; // h2 大見出し
+$fs-lg: 2.4rem; // h3 見出し
+$fs-md: 2rem; // h4 小見出し
+$fs-smd: 1.8rem; // h4 小見出し
+$fs-base: 1.5rem; // 本文
+$fs-xxs: 1.2rem; // 注釈・補助
+$fs-xxx: 1rem; // さらに小さい補助文字
+
+// ======================================
+// Color Variables
+// ======================================
+
+// ブランド・見出し系
+$color-corporate: #b50080; // メインカラー
+$color-main: #6a004b; // 見出し
+/* $color-accent: #fdc700; */ // アクセント
+$color-base: #fafafa;
+//ポイント
+$color-point: #008ddf;
+$color-point-bg: #f2faff;
+//注意事項
+$color-caution: #ce0000;
+$color-caution-bg: #fff0f0;
+//補足
+$color-supplement: $color-main;
+$color-supplement-bg: #f8e5f2; //不透明度は30%にする
+//参照
+$color-reference: #757575;
+//ノート
+$color-note: $color-base;
+
+// テキスト系
+$color-text: #424242; // 本文
+$color-subheading: #212121; // 小見出し
+$color-note: #757575; // 注釈
+//$color-copyright: #616161; // コピーライト
+
+$color-border: #e0e0e0; // ボタン枠線
+
+// モノトーン
+$color-black: #000000; // 完全ブラック
+$color-white: #ffffff; // 完全ホワイト
+
+// ======================================
+// Font Family
+// ======================================
+
+// 日本語ベース
+$font-jp-base: "Noto Sans CJK JP", "Noto Sans JP", sans-serif;
+
+// 日本語 見出し用（一部使用）
+//$font-jp-heading: "Toppan Bunkyu Midashi Gothic", "Noto Sans CJK JP", sans-serif;
+
+// 英字
+$font-en-base: "Montserrat", sans-serif;
+
+// 使用用途別フォント
+$font-base: $font-jp-base; // 本文（日本語）
+//$font-heading: $font-jp-heading; // 見出し（日本語・一部）
+$font-en: $font-en-base; // 英字表記
+
+// ======================================
+// margin Variables
+// ======================================
+$mg-xxl: 5rem;
+$mg-xl: 4rem;
+$mg-lg: 3rem;
+$mg-md: 2rem;
+$mg-sm: 1.5rem;
+$mg-xs: 1rem;
+$mg-xs: 0.5rem;

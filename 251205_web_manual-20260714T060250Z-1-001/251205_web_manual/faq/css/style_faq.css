@@ -1,0 +1,205 @@
+/* ======================　下層ページの html/.logo/.back-to-topのcss ======================*/
+html {
+  scroll-padding-top: 100px;
+}
+
+.manual {
+  font-size: 30px;
+  padding-left: 20px;
+  border-left: solid 1px #fff;
+  height: 44px;
+  color: #fff;
+  font-weight: 400;
+}
+
+.footer-logo .manual {
+  font-size: 20px;
+  height: 30px;
+}
+
+/* ====================== よくある質問主要部分  ======================*/
+
+.faq_inner {
+  background-color: #fff;
+  border-radius: 8px;
+}
+.faq_main-office,
+.faq_mall-office,
+.faq_tenant,
+.faq_utilities {
+  background-color: transparent;
+  border-radius: 0px;
+}
+
+.faq_main-office {
+  padding: 30px 40px;
+}
+
+.faq_mall-office,
+.faq_tenant,
+.faq_utilities {
+  padding: 0 40px 30px;
+}
+
+section > .container {
+  border-bottom: 1px dashed #e0e0e0;
+  padding-bottom: 30px;
+}
+
+section > .container:last-child {
+  border-bottom: 0;
+  padding-bottom: 0px;
+}
+
+.title_h1 {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  font-size: 30px;
+  color: #212121;
+  text-align: center;
+}
+
+.anchor {
+  padding: 40px 40px 30px;
+}
+.anchor ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.anchor_item {
+  border: #bdbdbd solid 1px;
+  border-radius: 6px;
+  width: 23%;
+  text-align: left;
+}
+
+.anchor ul li a {
+  position: relative;
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  color: #757575;
+  text-decoration: none;
+  text-align: center;
+  text-align: left;
+}
+
+.anchor ul li a::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  bottom: 0;
+  margin: auto;
+  box-sizing: border-box;
+  transform: rotate(135deg);
+  right: 15px;
+  width: 9px;
+  height: 9px;
+  border-top: 2px solid #757575;
+  border-right: 2px solid #757575;
+}
+
+.title_h2 {
+  font-size: 20px;
+  color: #212121;
+  border-left: #b50080 solid 10px;
+  padding-left: 10px;
+}
+
+.faq_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 30px 0 10px;
+}
+
+.faq_wrap::after {
+  display: block;
+  content: "";
+  width: 32%;
+}
+
+.footer-logo .manual {
+  font-size: 20px;
+  height: 30px;
+}
+
+/* ====================== レスポンシブ対応 ======================*/
+@media screen and (max-width: 1024px) {
+  html {
+    scroll-padding-top: 80px;
+  }
+  .manual {
+    padding-left: 2vw;
+    font-size: 20px;
+    height: 30px;
+  }
+  .anchor_faq ul {
+    flex-wrap: wrap;
+  }
+  .anchor_faq_item {
+    width: 49%;
+    box-sizing: border-box;
+  }
+  .anchor_faq_item:nth-child(1),
+  .anchor_faq_item:nth-child(2) {
+    margin-bottom: 20px;
+  }
+
+  .breadcrumbs {
+    padding: 0 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .breadcrumbs {
+    margin-top: 10px;
+    padding: 0;
+  }
+  .title_h1 {
+    font-size: 1.7rem;
+    margin: 40px 0;
+  }
+  .faq_wrap {
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+  .anchor {
+    padding: 0px 15px 30px;
+  }
+  .anchor ul {
+    flex-direction: column;
+    padding-top: 40px;
+  }
+  .anchor_item:nth-child(1),
+  .anchor_item:nth-child(2) {
+    margin-bottom: 0;
+  }
+  .anchor_item {
+    width: 100%;
+    margin-top: 20px;
+    box-sizing: border-box;
+  }
+  .anchor_faq_item:first-child {
+    margin-top: 0;
+  }
+
+  .faq_main-office {
+    padding: 30px 15px;
+  }
+
+  .faq_mall-office,
+  .faq_tenant,
+  .faq_utilities {
+    padding: 0 15px 40px;
+  }
+  .faq_link {
+    margin-bottom: 10px;
+  }
+  .faq_link a {
+    padding: 15px 10px;
+  }
+}

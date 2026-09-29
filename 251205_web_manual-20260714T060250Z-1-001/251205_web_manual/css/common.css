@@ -1,0 +1,607 @@
+* {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+p,
+span,
+a,
+li {
+  color: #fff;
+  list-style: none;
+}
+body {
+  background-color: #fafafa;
+  box-sizing: border-box;
+}
+header {
+  position: sticky;
+}
+/*============================================================================== */
+/* header、footer、各マニュアルへのリンク・よくある質問　共通パーツ、トップに戻る */
+/* パンくずリスト、アコーディオン */
+
+/*============================================================================== */
+
+/*--------------- header --------------- */
+
+.header {
+  background-color: #6a004b;
+  padding: 23px 30px;
+  top: 0;
+  z-index: 9999;
+}
+.header_inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo a {
+  display: flex;
+}
+.logo img {
+  margin-right: 20px;
+}
+.h1 {
+  font-size: 30px;
+  padding-left: 20px;
+  border-left: solid 1px #fff;
+  height: 44px;
+  color: #fff;
+  font-weight: 400;
+}
+
+.slide_menu {
+  display: flex;
+  list-style: none;
+}
+.slide_menu li {
+  margin-right: 20px;
+}
+.slide_menu li:last-child {
+  padding-right: 0;
+}
+.hamberger {
+  display: none;
+}
+.slide_menu li:hover {
+  border-bottom: 1px solid #fff;
+}
+
+.slide_menu li::before {
+  transform-origin: center top;
+}
+
+/* 各マニュアルへのリンク、よくある質問　共通パーツ */
+/* 右向きアローアイコン */
+
+.faq_link a,
+.manual_btn a,
+.link_faq-list {
+  position: relative;
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.faq_link a::after,
+.manual_btn a::after,
+.link_faq-list a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  box-sizing: border-box;
+  transform: rotate(45deg);
+}
+
+.faq_link a {
+  color: #424242;
+  border-bottom: 1px solid #b50080;
+  padding: 20px;
+}
+
+.faq_link a::after {
+  right: 5px;
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid #424242;
+  border-right: 2px solid #424242;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+.faq_link a:hover {
+  color: #b50080;
+  cursor: pointer;
+}
+
+.faq_link a:hover::after {
+  right: 0px;
+  border-top: 2px solid #b50080;
+  border-right: 2px solid #b50080;
+  border-bottom: 0;
+  transition: 0.15s;
+}
+
+.link_faq-list {
+  display: flex;
+  justify-content: end;
+}
+
+.link_faq-list a {
+  color: #b50080;
+  font-weight: 500;
+  padding-right: 20px;
+}
+
+.link_faq-list a::after {
+  right: 0px;
+  width: 9px;
+  height: 9px;
+  border-top: 2px solid #b50080;
+  border-right: 2px solid #b50080;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+.link_faq-list a:hover::after {
+  right: -5px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+/*--------------- トップに戻る --------------- */
+
+.back-to-top {
+  z-index: 100;
+  position: fixed;
+  right: 11px;
+  bottom: 61px;
+  cursor: pointer;
+  background-color: #6a004b;
+  border: 0;
+  box-shadow: 0px 0px 4px 4px rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  transition: opacity 0.4s;
+  opacity: 0;
+}
+.triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+  border-bottom: 15px solid #fff;
+  border-top: 0;
+  margin: 15px;
+  transition: 0.3s;
+}
+
+.back-to-top:hover {
+  background-color: #fff;
+  transition: 0.3s;
+  border: 1px solid #b50080;
+}
+
+.back-to-top .triangle:hover {
+  border-bottom: 15px solid #b50080;
+  transition: 0.3s;
+}
+
+/*--------------- パンくずリスト --------------- */
+
+.breadcrumbs {
+  margin: 0;
+  padding-right: 1em;
+  margin-top: 1em;
+}
+.breadcrumbs ul {
+  display: flex;
+}
+.breadcrumbs li a {
+  color: #757575;
+  position: relative;
+  font-size: 14px;
+}
+
+.breadcrumbs li a:hover {
+  text-decoration: underline;
+}
+.breadcrumbs li {
+  display: inline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.breadcrumbs li:first-child a {
+  padding-left: 0rem;
+}
+
+.breadcrumbs li + li::before {
+  color: #757575;
+  content: ">";
+  margin: 0 4px;
+}
+
+/*--------------- 目次アコーディオン --------------- */
+
+.accordion {
+  padding: 15px 20px 20px;
+  border: 1px #bdbdbd solid;
+  border-radius: 8px;
+  background-color: #fff;
+  transition: 0.5s;
+}
+
+.accordion summary {
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  color: #757575;
+  display: block;
+  list-style-type: none;
+  cursor: pointer;
+  /* width: 100%; */
+}
+
+.accordion summary:before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background: #333;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.accordion summary:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 4px 0 4px 6px;
+  border-color: transparent transparent transparent #fff;
+  position: absolute;
+  top: 0;
+  right: 6px;
+  bottom: 0;
+  margin: auto;
+  transition: 0.5s;
+  transform: rotate(90deg);
+}
+
+.accordion[open] summary:after {
+  transition: 0.5s;
+  transform: rotate(-90deg);
+}
+.accordion-inner {
+  padding: 0;
+}
+.accordion_list {
+  padding-top: 10px;
+}
+.accordion_list dt {
+  font-weight: bold;
+  padding: 10px 10px 10px;
+}
+
+.accordion_list dt:hover {
+  background-color: #fafafa;
+  font-weight: bold;
+}
+
+.accordion_list dd {
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px dashed #e0e0e0;
+}
+
+.accordion_list dd:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.accordion_list dd ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion_list dt a,
+.accordion_item a {
+  color: #424242;
+  display: block;
+}
+
+.accordion_list dt a:hover,
+.accordion_item :hover {
+  color: #b50080;
+  background-color: #fafafa;
+}
+.accordion_item {
+  padding: 0;
+}
+.accordion_item :hover {
+  background-color: #fafafa;
+  /* background-color: #bdbdbd; */
+}
+
+.accordion_item a {
+  padding: 10px 1vw;
+  font-size: 14px;
+  padding-left: 3vw;
+}
+
+.accordion_list .arrow-r::before {
+  border-top: solid 2px #757575;
+  border-right: solid 2px #757575;
+  left: 1.25vw;
+  width: 4px;
+  height: 4px;
+}
+
+.accordion_list .arrow-r:hover::before {
+  border-top: solid 2px #b50080;
+  border-right: solid 2px #b50080;
+}
+
+/*--------------- footer --------------- */
+.footer {
+  background-color: #6a004b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px 0 20px;
+  margin-top: 100px;
+  box-sizing: border-box;
+  width: 100%;
+}
+.footer_inner {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  min-width: 35%;
+}
+.footer-menu li {
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.footer-faq li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  padding-left: 20px;
+}
+.arrow-r {
+  position: relative;
+  display: inline-block;
+}
+.arrow-r:before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border: 0;
+  border-top: solid 2px #fff;
+  border-right: solid 2px #fff;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+}
+.footer-faq > p {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.footer-faq nav > ul {
+  display: flex;
+  flex-direction: column;
+}
+.copylight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.footer-logo {
+  width: 100%;
+  justify-content: center;
+}
+.footer-logo img {
+  height: 28px;
+}
+.footer-logo div {
+  height: 28px;
+}
+.footer-logo .h1 {
+  font-size: 20px;
+  height: 30px;
+}
+.footer-menu a:hover,
+.footer-faq a:hover {
+  text-decoration: underline;
+}
+
+.copylight > span {
+  margin-top: 10px;
+  font-size: 14px;
+  height: 32px;
+}
+
+/* ====================== レスポンシブ対応 ======================*/
+@media screen and (max-width: 1024px) {
+  /*------ ヘッダー ------ */
+  .header {
+    padding: 0;
+  }
+  .header_inner {
+    width: 100%;
+    background-color: #6a004b;
+    padding: 20px 15px;
+    box-sizing: border-box;
+  }
+  .header_container {
+    position: absolute;
+    top: 70px;
+  }
+  .logo img {
+    width: 100%;
+    max-width: 99px;
+    margin-right: 2vw;
+  }
+  .h1 {
+    padding-left: 2vw;
+    font-size: 20px;
+    height: 30px;
+    word-break: keep-all;
+  }
+  .slide_menu {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+  }
+  .logo img {
+    width: 100%;
+    max-width: 99px;
+    margin-right: 2vw;
+  }
+
+  /*------ SP用ハンバーガーメニュー ------ */
+  .hamberger {
+    display: block;
+    width: 30px;
+    height: 100%;
+  }
+  .hamberger span {
+    width: 100%;
+    height: 3px;
+    border-radius: 4px;
+    background-color: #fff;
+    position: relative;
+    transition: ease 0.4s;
+    display: block;
+  }
+  .hamberger span:nth-child(1) {
+    top: 0;
+  }
+  .hamberger span:nth-child(2) {
+    margin: 8px 0;
+  }
+  .hamberger span:nth-child(3) {
+    top: 0;
+  }
+  .hamberger.open {
+    transform: translateX(0);
+  }
+  .hamberger.open span:nth-child(1) {
+    top: 13px;
+    transform: rotate(45deg);
+  }
+  .hamberger.open span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamberger.open span:nth-child(3) {
+    top: -9px;
+    transform: rotate(-45deg);
+  }
+  /*------ メニュー開閉------ */
+  .slide_menu {
+    display: none;
+  }
+  .slide_menu.slide {
+    display: block;
+    position: fixed;
+    width: 100%;
+    z-index: -1;
+    background-color: rgba(66 66 66 / 95%);
+    padding-bottom: 20px;
+  }
+  /* ------ハンバーガーメニュー　フェードインアニメーション------ */
+  .slide_menu.animation_box {
+    animation: fadeIn 0.4s ease 0s 1 normal backwards;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-310px);
+    }
+    to {
+      opacity: 0.95;
+      transform: translateY(0px);
+    }
+  }
+
+  .slide_menu li {
+    margin-right: 0;
+  }
+  .slide_menu li a {
+    width: 95%;
+    display: block;
+    padding: 15px 15px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    border-bottom: 1px solid #fff;
+  }
+  .slide_menu li:first-child {
+    padding-top: 5px;
+  }
+  .slide_menu li:hover {
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #b50080;
+    outline: 1px solid;
+    outline-color: #fff;
+  }
+  .slide_menu li a:hover {
+    color: #b50080;
+    font-weight: bold;
+    border: none;
+  }
+  .accordion_list {
+    padding-top: 20px;
+  }
+
+  .accordion_item a {
+    padding-left: 4vw;
+  }
+
+  @media screen and (max-width: 540px) {
+    .accordion_item a {
+      padding-left: 6vw;
+    }
+  }
+
+  /*------ フッター ------ */
+  .footer {
+    padding: 30px 7vw;
+  }
+  .footer_inner {
+    min-width: 0;
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .footer-faq {
+    margin-top: 25px;
+  }
+  .footer-menu li,
+  .footer-faq > p {
+    margin-bottom: 20px;
+  }
+  .footer-faq li {
+    margin-bottom: 20px;
+  }
+}

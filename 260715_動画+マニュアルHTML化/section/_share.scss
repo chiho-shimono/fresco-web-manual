@@ -1,0 +1,44 @@
+@use "../abstracts/variables" as *;
+
+.share {
+    &__title {
+        margin: 0 0 3rem;
+        &--en {
+            font-size: $fs-xl;
+            font-weight: 700;
+            line-height: 1.4;
+            color: $color-main;
+            font-family: $font-en;
+            display: block;
+            text-align: center;
+        }
+        &--ja {
+            font-size: $fs-xxs;
+            font-weight: 700;
+            line-height: 1.4;
+            color: $color-main;
+            font-family: $font-base;
+            display: block;
+            text-align: center;
+        }
+    }
+    &__item {
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        > a {
+            width: 44px;
+            height: 44px;
+            display: inline-block;
+            > img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        &--x {
+            background-color: $color-black;
+            padding: 1rem;
+            border-radius: 0.6rem;
+        }
+    }
+}

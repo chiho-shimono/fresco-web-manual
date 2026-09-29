@@ -1,0 +1,75 @@
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 24px;
+  }
+  main {
+    padding: 0 15px;
+  }
+  section {
+    width: 100%;
+    padding: 30px 15px;
+    box-sizing: border-box;
+  }
+
+  /*==================== 各マニュアルへのリンク ==================== */
+  .manual_wrapper {
+    margin-top: 30px;
+    width: 100%;
+  }
+  .manual_wrapper > ul {
+    flex-direction: column;
+    width: 100%;
+  }
+  .manual_btn a {
+    width: 100%;
+  }
+  .manual_wrapper > ul li:first-child {
+    padding-right: 0;
+    padding-bottom: 20px;
+  }
+
+  /*==================== よくある質問 ==================== */
+  .tabs{
+    margin-top: 30px;
+  }
+  .tab_list {
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    width: 100%;
+    justify-content: space-around;
+  }
+  .tab_item {
+    font-size: 14px;
+    border-radius: 4px;
+    border: solid 1px #e0e0e0;
+    width: 100%;
+    width: 40vw;
+  }
+  .link_faq-list{
+    margin-top: 0;
+  }
+  @media screen and (max-width: 540px) {
+    .tab_item{
+      width: 35vw;
+    }
+  }
+  .tab_item:first-child,.tab_item:nth-child(2){
+    margin-bottom: 1vh;
+  }
+  .tab_panel.active {
+    padding: 20px 0 0;
+  }
+  .faq_link {
+    width: 100%;
+    margin-bottom: 0px;
+  }
+  .faq_link:last-child {
+    margin-bottom: 20px;
+  }
+  .faq_link a{
+    padding: 20px 10px;
+  }
+  .sp_br {
+    display: block;
+  }
+}

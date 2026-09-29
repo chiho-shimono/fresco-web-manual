@@ -1,0 +1,264 @@
+main {
+  flex-direction: column;
+  height: 100%;
+}
+.manual_wrapper {
+  flex-direction: column;
+}
+
+.manual_pdf,
+.manual_movies {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 40px;
+  width: 100%;
+  margin-top: 50px;
+  box-sizing: border-box;
+}
+.manual_movies {
+  margin-bottom: 100px;
+}
+.manual_wrapper {
+  margin-top: 20px;
+}
+.manual_wrapper p {
+  text-align: center;
+}
+.manual_btn {
+  max-width: fit-content;
+  margin: 20px 0px 10px;
+}
+.manual_btn a {
+  margin: 0;
+}
+.manual_btn a::after {
+  right: 6%;
+}
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+/* 動画 */
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+.movies_wrapper {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.video {
+  width: 100%;
+  outline: 1px solid rgba(117, 117, 117, 0.1);
+  margin-top: 20px;
+}
+.about_movie {
+  margin-top: 15px;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #bdbdbd;
+}
+.about_movie > .h4 {
+  margin-bottom: 15px;
+}
+
+.note_list li::before {
+  content: "・";
+}
+
+/* ------ 動画専用ページ　遷移ボタンリンク ------ */
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+  width: 100%;
+}
+.button {
+  border: 1px solid #bdbdbd;
+  background-color: transparent;
+  border-radius: 6px;
+  position: relative;
+  align-items: center;
+}
+
+.button a {
+  color: #424242;
+  display: block;
+}
+
+.button:hover a{
+  color: #b50080;
+}
+
+.button:hover a::after {
+  border-top: 2px solid #b50080;
+  border-right: 2px solid #b50080;
+}
+
+.backtoIndex {
+  font-size: 16px;
+  font-weight: bold;
+}
+.backtoIndex a{
+  padding: 7px 12px;
+}
+.prev,
+.next {
+  width: 38px;
+  height: 38px;
+}
+
+.prev a, .next a{
+  width: 100%;
+  height: 100%;
+}
+.prev a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  box-sizing: border-box;
+  transform: rotate(-135deg);
+  right: 32%;
+  width: 9px;
+  height: 9px;
+  border-top: 2px solid #424242;
+  border-right: 2px solid #424242;
+}
+.next a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  box-sizing: border-box;
+  transform: rotate(45deg);
+  right: 41%;
+  width: 9px;
+  height: 9px;
+  border-top: 2px solid #424242;
+  border-right: 2px solid #424242;
+}
+
+.hidden {
+  visibility: hidden;
+  cursor: default;
+}
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+/* モール事務所向け　目次 */
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+.contents {
+  margin-top: 30px;
+  width: 100%;
+  padding: 0 15px;
+}
+.contents_block {
+  padding: 20px 15px;
+}
+.vertical_line {
+  border-left: 5px solid #b50080;
+  padding-left: 15px;
+}
+.contents_list {
+  margin-top: 20px;
+  border: 1px solid rgb(189, 189, 189, 0.6);
+  border-radius: 4px;
+}
+.contents_list_item {
+  position: relative;
+  padding: 0 10px;
+}
+
+.contents_list_item a {
+  color: #b50080;
+  display: inline-block;
+  width: 100%;
+  padding: 15px 10px 15px 10px;
+  box-sizing: border-box;
+}
+
+.contents_list_item:nth-child(n + 2) a {
+  border-top: 1px solid rgb(189, 189, 189, 0.6);
+}
+.contents_list_item a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  box-sizing: border-box;
+  transform: rotate(45deg);
+  right: 3%;
+  width: 6px;
+  height: 6px;
+  border-top: 2px solid #b50080;
+  border-right: 2px solid #b50080;
+}
+.contents_list_item:hover {
+  background-color: rgb(189, 189, 189, 0.1);
+  transition: 0.15s;
+}
+.contents_list_item:hover a::after {
+  right: 2.5%;
+  transition: 0.15s;
+}
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+/* レスポンシブ対応 */
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+@media screen and (max-width: 540px) {
+  .breadcrumbs li + li::before {
+    margin: 0 10px;
+  }
+  .manual_pdf,
+  .manual_movies {
+    padding: 40px 15px;
+  }
+  .manual_pdf {
+    margin-top: 30px;
+  }
+  .manual_wrapper p {
+    text-align: left;
+  }
+  .manual_btn {
+    margin-bottom: 0;
+    max-width: none;
+  }
+  .title {
+    font-size: 24px;
+  }
+  .h3 {
+    font-size: 20px;
+  }
+
+  /* ------ モール事務所向け　目次 ------ */
+  .contents_list_item a::after {
+    right: 5%;
+  }
+  .contents_list_item:hover a::after {
+    right: 3%;
+  }
+
+  /* ------ 動画  ------*/
+  .video {
+    margin-top: 20px;
+  }
+  .about_movie {
+    margin-top: 10px;
+    padding: 20px 15px;
+  }
+  .note_list li,
+  .note p {
+    font-size: 13px;
+  }
+
+  /* 動画専用ページ　遷移ボタン */
+  .button a {
+    font-size: 13px;
+  }
+}

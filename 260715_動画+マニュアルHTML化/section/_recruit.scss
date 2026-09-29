@@ -1,0 +1,80 @@
+@use "../abstracts/variables" as *;
+.recruit {
+  &__title {
+    margin: 0 0 3rem;
+    &--en {
+      font-size: $fs-xl;
+      font-weight: 700;
+      line-height: 1.4;
+      color: $color-corporate;
+      font-family: $font-en;
+      display: block;
+      text-align: center;
+    }
+    &--ja {
+      font-weight: 700;
+      line-height: 1.4;
+      color: $color-corporate;
+      font-size: $fs-base;
+      display: block;
+      text-align: center;
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    &--bunner_link {
+      display: block;
+      width: fit-content;
+      border-radius: 1rem;
+      overflow: hidden;
+      img {
+        margin: 0 auto;
+      }
+    }
+  }
+  &__desc {
+    &--left {
+      font-weight: 500;
+      text-align: left;
+      font-size: $fs-base;
+      color: $color-subheading;
+    }
+    &--center {
+      font-weight: 700;
+      text-align: center;
+      font-size: $fs-sm;
+      color: $color-subheading;
+      margin-bottom: 1.6rem;
+    }
+  }
+  &__banner {
+    position: relative;
+    display: inline-block;
+    margin: 1.6rem auto;
+    &--text {
+      /* -----バナー支給後削除----- */
+      color: #fff;
+      font-size: $fs-sm;
+      font-weight: bold;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
+    &--wrap {
+      ::before {
+        /* -----バナー支給後削除----- */
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        pointer-events: none;
+      }
+    }
+  }
+}

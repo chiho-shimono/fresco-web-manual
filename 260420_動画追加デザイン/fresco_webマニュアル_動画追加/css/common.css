@@ -1,0 +1,421 @@
+* {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+span,
+a,
+li {
+  list-style: none;
+}
+
+p,
+li {
+  color: #424242;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+body {
+  background-color: #fafafa;
+  box-sizing: border-box;
+}
+header {
+  position: sticky;
+}
+
+html {
+  scroll-padding-top: 100px;
+  box-sizing: border-box;
+}
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+/* header */
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+.header {
+  background-color: #6a004b;
+  padding: 23px 30px;
+  top: 0;
+  z-index: 9999;
+}
+.header_inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+.logo {
+  display: flex;
+}
+.logo a {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  margin-right: 20px;
+}
+.h1 {
+  font-size: 30px;
+  padding-left: 20px;
+  border-left: solid 1px #fff;
+  height: 44px;
+  color: #fff;
+  font-weight: 400;
+}
+.title {
+  font-size: 30px;
+  color: #212121;
+  text-align: center;
+}
+.h3,
+.h4 {
+  color: #212121;
+}
+.h3 {
+  font-size: 20px;
+}
+.h4 {
+  font-size: 15px;
+}
+main {
+  width: 100%;
+  max-width: 1024px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 90px - 90px);
+}
+.sec_manual {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 40px;
+  width: 100%;
+}
+
+.sp_br {
+  display: none;
+}
+
+/*------ パンくずリスト ------ */
+
+.breadcrumbs {
+  margin: 0;
+  margin-top: 1em;
+  margin-top: 30px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.breadcrumbs ul {
+  display: flex;
+}
+.breadcrumbs li a {
+  color: #757575;
+  position: relative;
+  font-size: 12px;
+}
+
+.breadcrumbs li a:hover {
+  text-decoration: underline;
+}
+.breadcrumbs li {
+  display: inline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.breadcrumbs li:first-child a {
+  padding-left: 0rem;
+}
+
+.breadcrumbs li + li::before {
+  color: #757575;
+  content: ">";
+  margin: 0 15px;
+}
+
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+/* 各マニュアルへのリンク */
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+.manual_wrapper {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.manual_wrapper > ul {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.manual_wrapper > ul::after {
+  display: block;
+  content: "";
+  height: 0;
+  width: 48%;
+}
+
+.manual_btn {
+  width: 48%;
+}
+
+.manual_btn:nth-child(n + 3) {
+  margin-top: 20px;
+}
+
+.manual_btn a {
+  position: relative;
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px 41px 20px 30px;
+  background-color: #fff;
+  border-radius: 4px;
+  color: #b50080;
+  text-decoration: none;
+  text-align: center;
+  border: 2px solid #b50080;
+}
+
+.manual_btn a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  box-sizing: border-box;
+  transform: rotate(45deg);
+  right: 5%;
+  width: 9px;
+  height: 9px;
+  border-top: 2px solid #b50080;
+  border-right: 2px solid #b50080;
+}
+
+.manual_btn a:hover {
+  background-color: #b50080;
+  color: #fff;
+  cursor: pointer;
+}
+
+.manual_btn a:hover::after {
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+}
+
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+/* footer */
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+.footer {
+  background-color: #6a004b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+
+  padding: 15px;
+}
+.footer_inner {
+  display: flex;
+  justify-content: space-between;
+  min-width: 35%;
+  flex-direction: column;
+}
+.copylight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.footer-logo {
+  width: 100%;
+  justify-content: center;
+}
+.footer-logo img {
+  height: 28px;
+}
+.footer-logo div {
+  height: 28px;
+}
+.footer-logo .h1 {
+  font-size: 20px;
+  height: 30px;
+}
+.copylight > span {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #fff;
+}
+
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+/* トップに戻る */
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+
+.back-to-top {
+  z-index: 100;
+  position: fixed;
+  right: 6%;
+  bottom: 6%;
+  cursor: pointer;
+  background-color: #6a004b;
+  border: 0;
+  box-shadow: 0px 0px 4px 4px rgba(255, 255, 255, 0.25);
+  border-radius: 4px;
+  transition: opacity 0.4s;
+  opacity: 0;
+  outline: 0;
+}
+.triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+  border-bottom: 15px solid #fff;
+  border-top: 0;
+  margin: 15px;
+  transition: 0.3s;
+}
+
+.back-to-top:hover {
+  background-color: #fff;
+  transition: 0.3s;
+  outline: 1px solid #b50080;
+}
+
+.back-to-top:hover .triangle {
+  border-bottom: 15px solid #b50080;
+  transition: 0.3s;
+}
+
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+/* レスポンシブ対応 */
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+
+/* ------ PC・タブレット ------ */
+@media screen and (max-width: 1024px) {
+  /* header  */
+  .header {
+    padding: 0;
+  }
+  .header_inner {
+    width: 100%;
+    background-color: #6a004b;
+    padding: 20px 15px;
+    box-sizing: border-box;
+  }
+  .header_container {
+    position: absolute;
+    top: 70px;
+  }
+  .logo img {
+    width: 100%;
+    max-width: 99px;
+    margin-right: 2vw;
+  }
+  .h1 {
+    padding-left: 2vw;
+    font-size: 20px;
+    height: 30px;
+    word-break: keep-all;
+  }
+  .logo img {
+    width: 100%;
+    max-width: 99px;
+    margin-right: 2vw;
+  }
+  /* main、各マニュアルへのリンク  */
+  main {
+    height: calc(100vh - 70px - 90px);
+  }
+  .manual_wrapper > ul {
+    flex-direction: column;
+    width: 100%;
+  }
+  .manual_wrapper > ul::after {
+    display: none;
+  }
+  .manual_btn {
+    width: 100%;
+  }
+  .manual_btn:nth-child(n + 3) {
+    margin-top: 0;
+  }
+
+  .manual_btn a {
+    margin: 8px 0;
+    width: 100%;
+  }
+  /* footer  */
+  .footer_inner {
+    min-width: 0;
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+/* ------ スマホ ------ */
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 24px;
+  }
+  main {
+    padding: 0 15px;
+  }
+  section {
+    width: 100%;
+    padding: 30px 15px;
+    box-sizing: border-box;
+  }
+
+  /* 各マニュアルへのリンク */
+  .manual_wrapper {
+    width: 100%;
+    margin-top: 2.5vh;
+  }
+  .manual_wrapper > ul {
+    flex-direction: column;
+    width: 100%;
+  }
+  .manual_btn a {
+    width: 100%;
+  }
+  .manual_wrapper > ul::after {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .sp_br {
+    display: inline-block;
+  }
+}

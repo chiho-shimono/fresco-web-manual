@@ -1,0 +1,84 @@
+@use "../abstracts/variables" as *;
+
+.aboutus {
+  position: relative;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    vertical-align: middle;
+    align-items: center;
+  }
+  &__title {
+    &--en {
+      font-size: 1.6rem !important;
+      margin-bottom: 1.5rem;
+    }
+    &--ja {
+      font-size: 2.6rem !important;
+      font-weight: 900 !important;
+      font-family: $font-jp-heading;
+      line-height: 2 !important;
+    }
+    &--sub {
+      font-size: $fs-sm !important;
+      text-align: center;
+      display: block;
+      width: 100%;
+    }
+  }
+  &__text {
+    margin-top: 3rem;
+    font-size: $fs-base;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    &--bold {
+      font-weight: bold;
+      text-align: center;
+      font-size: $fs-sm;
+      color: $color-main;
+    }
+  }
+  &__item {
+    &--btn-wrap {
+      margin-top: 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      width: 100%;
+      .cap--xxs span {
+        text-decoration: underline;
+      }
+    }
+  }
+  &__bg-image {
+    /*  --- 装飾画像 --- */
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: -webkit-fill-available; /* Chrome, Safari用 */
+    height: -moz-available; /* Firefox用 */
+    height: stretch;
+    height: 100%; /* Firefox用 */
+    height: stretch;
+    height: stretch;
+    z-index: -1;
+    img {
+      width: 100%;
+      &:first-child {
+        position: absolute;
+        top: 0;
+        max-width: 170px;
+        right: 0;
+      }
+      &:last-child {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        max-width: 430px;
+      }
+    }
+  }
+}

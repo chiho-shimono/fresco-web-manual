@@ -1,0 +1,51 @@
+@use "../abstracts/variables" as *;
+
+.access {
+    &__title {
+        margin: 0 0 3rem;
+        &--en {
+            font-size: $fs-xl;
+            font-weight: 700;
+            line-height: 1.4;
+            color: $color-main;
+            font-family: $font-en;
+            display: block;
+            text-align: center;
+        }
+        &--ja {
+            font-size: $fs-xxs;
+            font-weight: 700;
+            line-height: 1.4;
+            color: $color-main;
+            font-family: $font-base;
+            display: block;
+            text-align: center;
+        }
+    }
+    &__item {
+        &--map-wrapper {
+            position: relative;
+            width: 100%;
+            padding-top: 100%; // 高さ = 幅 → 1:1比
+            overflow: hidden;
+        }
+        &--map {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        &--address {
+            font-style: normal;
+            text-align: center;
+            margin: 3rem 0 2rem;
+            font-weight: 500;
+            font-size: $fs-sm;
+        }
+        &--btn-wrap {
+            text-align: center;
+        }
+    }
+}
