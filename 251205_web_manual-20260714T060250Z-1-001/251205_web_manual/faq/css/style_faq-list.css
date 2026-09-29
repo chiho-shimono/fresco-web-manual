@@ -1,0 +1,184 @@
+/* ======================　下層ページの html/.logo/.back-to-topのcss ======================*/
+
+html {
+  scroll-padding-top: 100px;
+}
+
+.manual {
+  font-size: 30px;
+  padding-left: 20px;
+  border-left: solid 1px #fff;
+  height: 44px;
+  color: #fff;
+  font-weight: 400;
+}
+
+.footer-logo .manual {
+  font-size: 20px;
+  height: 30px;
+}
+
+/* ====================== テナント向け/便利機能マニュアル主要部分  ======================*/
+
+.title_h1 {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 30px;
+}
+.sub-title {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 12px;
+  margin-bottom: 40px;
+}
+
+/* -------- 目次アコーディオン -------- */
+
+.accordion_item {
+  padding: 0;
+  border-bottom: #bdbdbd 1px solid;
+}
+
+.accordion_item:hover {
+  background-color: #fafafa;
+  border-color: #b50080;
+}
+
+.accordion_item a {
+  padding: 15px 10px;
+  font-size: 16px;
+  position: relative;
+}
+
+.accordion_item a:hover {
+  color: #b50080;
+  cursor: pointer;
+}
+
+.accordion_item a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  box-sizing: border-box;
+  transform: rotate(135deg);
+  right: 20px;
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid #424242;
+  border-right: 2px solid #424242;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+.accordion_item a:hover::after {
+  border-top: 2px solid #b50080;
+  border-right: 2px solid #b50080;
+  transition: 0.15s;
+}
+
+/* -------- よくある質問用アコーディオン --------*/
+
+.faq_accordion_title {
+  font-weight: bold;
+  position: relative;
+  color: #757575;
+  display: block;
+  list-style-type: none;
+}
+
+.faq_accordion_title:hover {
+  cursor: pointer;
+}
+
+.faq_accordion_title {
+  color: #212121;
+  background-color: #fff;
+  padding: 15px 10px;
+}
+
+.faq_accordion_title:before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background: #333;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.faq_accordion_title:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 4px 0 4px 6px;
+  border-color: transparent transparent transparent #fff;
+  position: absolute;
+  top: 0;
+  right: 6px;
+  bottom: 0;
+  margin: auto;
+  transition: 0.5s;
+  transform: rotate(90deg);
+}
+
+.faq_accordion[open] .faq_accordion_title:after {
+  transition: 0.5s;
+  transform: rotate(-90deg);
+}
+
+/* ---------- 目次部分 ---------- */
+
+.faq_container {
+  margin-top: 60px;
+  background-color: #fff;
+}
+
+section {
+  background-color: transparent;
+}
+
+.title_h2 {
+  font-size: 20px;
+  color: #212121;
+  border-left: #b50080 solid 10px;
+  padding-left: 10px;
+}
+.faq_accordion {
+  border-bottom: dashed 1px #e0e0e0;
+  border-radius: 0px;
+  margin-top: 0px;
+  box-sizing: border-box;
+}
+
+.faq_accordion:first-of-type {
+  margin-top: 10px;
+}
+
+.faq_accordion_contents {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.faq_accordion-inner {
+  padding: 5px 10px 20px;
+}
+.faq_accordion_contents p {
+  color: #424242;
+}
+
+/* ============== レスポンシブ対応 ============== */
+
+@media screen and (max-width: 768px) {
+  .title_h1 {
+    font-size: 1.7rem;
+  }
+  .faq_accordion_title {
+    padding: 15px 0;
+    padding-right: 25px;
+  }
+}

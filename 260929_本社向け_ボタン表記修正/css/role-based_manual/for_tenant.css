@@ -1,0 +1,12 @@
+.video {
+  margin-top: 15px;
+}
+
+@media screen and (max-width: 540px) {
+  .video {
+    margin-top: 10px;
+  }
+  .movies_wrapper {
+    margin-bottom: 0;
+  }
+}

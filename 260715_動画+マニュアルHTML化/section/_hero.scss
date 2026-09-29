@@ -1,0 +1,94 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.hero {
+  margin: 0;
+  padding: 0;
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 50%; // 高さ = 幅 → 1:1比
+    background-image:
+      linear-gradient(to top, rgba(0, 0, 0, 0.7) -10%, rgba(0, 0, 0, 0) 60%),
+      url("../images/image-hero-koriyama-v2.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  &__container {
+    z-index: 2;
+    position: absolute;
+    left: 50%;
+    bottom: -2vh;
+    transform: translate(-50%, 0);
+    text-align: center;
+    width: 100%;
+  }
+  &__title {
+    font-size: $fs-xxl;
+    color: $color-white;
+    margin: 0 0 1rem;
+  }
+  &__subtitle {
+    display: inline-block;
+    color: $color-white;
+    font-size: $fs-md;
+    line-height: 1;
+    &--lg {
+      font-size: $fs-md;
+      display: inline-block;
+      position: relative;
+      top: 0.05rem;
+    }
+    &--mid {
+      font-size: $fs-bmd;
+      display: inline-block;
+      position: relative;
+      top: -0.05rem;
+    }
+    &--small {
+      display: inline-block;
+      font-size: $fs-sm;
+      position: relative;
+    }
+    &--ml-sm {
+      top: -0.05rem;
+      left: -0.4rem;
+    }
+    &--ribbon {
+      position: relative;
+      padding: 0.4rem 5.2rem 0.8rem;
+      background-color: $color-corporate;
+      display: inline-block;
+      // 左右ともV字にくり抜く（◁ ▷）
+      clip-path: polygon(
+        0% 0%,
+        // 左上
+        100% 0%,
+        // 右上
+        calc(100% - 12px) 50%,
+        // 右のくり抜き先端（内側へ）
+        100% 100%,
+        // 右下
+        0% 100%,
+        // 左下
+        12px 50% // 左のくり抜き先端（内側へ）
+      );
+    }
+  }
+  &__bg-image {
+    position: absolute;
+    top: 0;
+    height: -webkit-fill-available; /* Chrome, Safari用 */
+    height: -moz-available; /* Firefox用 */
+    height: stretch;
+    height: 100%; /* Firefox用 */
+    width: 100%;
+    img {
+      width: 100%;
+      &:last-child {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+  }
+}

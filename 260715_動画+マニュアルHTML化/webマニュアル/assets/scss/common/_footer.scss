@@ -1,0 +1,15 @@
+@use "../abstracts/variables" as *;
+//=================================
+//footer
+//=================================
+.footer {
+  &__container {
+    text-align: center;
+  }
+  &__text {
+    padding: 4rem 0 6rem;
+    font-weight: 500;
+    font-size: $fs-xxx;
+    color: $color-copyright;
+  }
+}

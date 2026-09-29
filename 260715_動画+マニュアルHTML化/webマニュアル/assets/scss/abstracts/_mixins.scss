@@ -1,0 +1,33 @@
+// -----------------------------
+// ブレイクポイント
+// -----------------------------
+$breakpoints: (
+  sp: 440px,
+  tb: 768px,
+  pc: 1024px
+);
+
+// -----------------------------
+// レスポンシブ対応mixin
+//
+// usage:@include pc {
+//    width: 50%;
+//  }
+// -----------------------------
+@mixin pc {
+  @media screen and (max-width: ($pc)) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media screen and (max-width: ($tab)) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media screen and (max-width: ($sp)) {
+    @content;
+  }
+}

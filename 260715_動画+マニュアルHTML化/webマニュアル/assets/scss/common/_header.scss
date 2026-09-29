@@ -1,0 +1,36 @@
+@use "../abstracts/variables" as *;
+//=================================
+//header
+//=================================
+.header {
+  position: sticky;
+  background-color: #6a004b;
+  padding: 23px 30px;
+  top: 0;
+  z-index: 9999;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+  }
+}
+.logo {
+  display: flex;
+  a {
+    display: flex;
+    align-items: center;
+  }
+  img {
+    margin-right: 20px;
+  }
+}
+
+.h1 {
+  font-size: 3rem;
+  padding-left: $mg-md;
+  border-left: solid 1px #fff;
+  height: 44px;
+  color: #fff;
+  font-weight: 400;
+}
